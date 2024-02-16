@@ -1,0 +1,32 @@
+<section class="list-character">
+  <h2>Characters</h2>
+  <div class="list-options">
+    <shared-search-box
+    placeholder="Search by name"
+    (valueChange)="searchByFilters('name', $event)"
+    ></shared-search-box>
+    <shared-select-options
+    [options]="optionsGender"
+    (valueChange)="searchByFilters('gender', $event)"
+    ></shared-select-options>
+    <shared-select-options
+    [options]="optionsRace"
+    (valueChange)="searchByFilters('race', $event)"
+    ></shared-select-options>
+    <shared-select-options
+    [options]="optionsAffiliation"
+    (valueChange)="searchByFilters('affiliation', $event)"
+    ></shared-select-options>
+  </div>
+  <!-- <shared-pagination
+    *ngIf="pagination"
+    [pagination]="pagination"
+    (valueChange)="searchByFilters('page', $event)"
+  ></shared-pagination> -->
+  <dbz-card-list [characters]="characters"> </dbz-card-list>
+  <shared-pagination
+  *ngIf="pagination"
+  [pagination]="pagination"
+  (valueChange)="searchByFilters('page', $event)"
+  ></shared-pagination>
+</section>

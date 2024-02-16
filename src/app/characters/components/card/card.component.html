@@ -1,0 +1,13 @@
+<div class="card">
+  <img src="{{ character.image }}" [alt]="character.name" loading="lazy"/>
+  <div class="card-content">
+    <p class="card-title">{{ character.name }}</p>
+    <p class="card-body">
+      <strong>Ki:</strong> {{ character.ki }} <br />
+      <strong>MaxKi:</strong> {{ character.maxKi }}
+    </p>
+    <p class="footer">
+      <span class="by-name">Affiliation:&nbsp;</span>{{ character.affiliation }}
+    </p>
+  </div>
+</div>

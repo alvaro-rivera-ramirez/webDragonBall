@@ -1,0 +1,28 @@
+.container-pagination{
+  width: 100%;
+  display: flex;
+  margin: 20px 0  10px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-items: center;
+  gap: 2px;
+}
+
+.container-pagination .info-pagination{
+  margin-right: 5px;
+}
+.container-pagination button{
+  border: 0;
+  cursor: pointer;
+  background-color: var(--backgroud-color);
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid var(--primary-color);
+}
+
+.container-pagination button:hover{
+  background-color: var(--primary-color);
+}

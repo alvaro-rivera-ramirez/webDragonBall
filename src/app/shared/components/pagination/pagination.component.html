@@ -1,0 +1,29 @@
+<div class="container-pagination">
+  <p class="info-pagination">
+    <span
+      >{{ pagination.itemsPerPage * (pagination.currentPage - 1) + 1 }} -
+      {{
+        pagination.itemsPerPage * (pagination.currentPage - 1) +
+          pagination.itemCount
+      }}
+      of {{ pagination.totalItems }}</span
+    >
+    &nbsp;
+    <strong>Page:</strong> {{ pagination.currentPage }}
+  </p>
+  <button (click)="handlePage('previous')">
+    <img src="../../../../assets/icons/skip_previous.svg" alt="" class="icon" />
+  </button>
+  <button [disabled]="pagination.currentPage == 1" (click)="handlePage('left')">
+    <img src="../../../../assets/icons/arrow_left.svg" alt="" class="icon" />
+  </button>
+  <button
+    [disabled]="pagination.totalPages == pagination.currentPage"
+    (click)="handlePage('right')"
+  >
+    <img src="../../../../assets/icons/arrow_right.svg" alt="" class="icon" />
+  </button>
+  <button (click)="handlePage('next')">
+    <img src="../../../../assets/icons/skip_next.svg" alt="" class="icon" />
+  </button>
+</div>

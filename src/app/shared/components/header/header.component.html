@@ -1,0 +1,25 @@
+<header class="topheader">
+  <nav class="topnav">
+    <a href="" class="logo">
+      <img
+      height="50"
+      width="80"
+      src="../../../../assets/img/Dragon-Ball-Logo.png" alt="">
+    </a>
+    <button class="open-menu"
+    (click)="toggleMenu()"
+    aria-label="Abrir menú">
+      <img src="../../../../assets/icons/hamburger-icon.svg" alt="abrir menú" />
+    </button>
+    <ul [ngClass]="{'menu':true,'menu_opened':openMenu}">
+      <button class="close-menu"
+      (click)="toggleMenu()"
+      aria-label="Cerrar menú">
+        <img src="../../../../assets/icons/close-icon.svg" alt="cerrar menú" />
+      </button>
+      <li><a [routerLink]="['/characters']">Characters</a></li>
+      <li><a [routerLink]="['/planets']">Planets</a></li>
+      <li><a href="#transformations">Transformations</a></li>
+    </ul>
+  </nav>
+</header>
